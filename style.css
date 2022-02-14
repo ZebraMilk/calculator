@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'digital-7_monomono';
+  src: url('./font/digital7mono-b1g5-webfont.woff2') format('woff2'),
+       url('./font/digital7mono-b1g5-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'digital-7_monoitalic';
+  src: url('./font/digital7monoitalic-8xkz-webfont.woff2') format('woff2'),
+       url('./font/digital7monoitalic-8xkz-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 * {
   border: 2px solid red;
   box-sizing: border-box;
@@ -11,6 +29,10 @@
 }
 
 .display {
+  font-family: "digital-7_monomono", monospace;
+}
+
+.display.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,6 +43,16 @@ input {
   border-style: none;
 }
 
+output {
+  font-family: inherit;
+}
+
+.display.results {
+  height: 1.5rem;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
 .btns-container {
   display: grid;
   grid-template:
