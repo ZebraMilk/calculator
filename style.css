@@ -1,0 +1,37 @@
+* {
+  border: 2px solid red;
+  box-sizing: border-box;
+}
+
+.calculator-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  border-style: none;
+}
+
+.btns-container {
+  display: grid;
+  grid-template:
+    "clear clear clear clear"
+    ". divide multiply subtract"
+    "seven eight nine plus"
+    "four five six add"
+    "one two three equals"
+    "zero zero decimal equals";
+}
+
+.btn {
+  width: 4rem;
+}
