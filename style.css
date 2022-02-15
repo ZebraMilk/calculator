@@ -14,56 +14,103 @@
   font-style: normal;
 }
 
-
+html {
+  font-size: 40px;
+}
 
 * {
-  border: 2px solid red;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid orange; */
   box-sizing: border-box;
 }
 
-.calculator-body {
+body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
+
+.calculator-frame {
+  margin: 1rem;
+  width: auto;
+  border: 2px solid black;
+  border-radius: 1rem;
+  background-color: aquamarine;
+  color: black;
+}
+
+
 
 .display {
   font-family: "digital-7_monomono", monospace;
 }
 
 .display.container {
+  margin: 1rem;
+  padding: .5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-input {
-  border-style: none;
-}
-
-output {
-  font-family: inherit;
 }
 
 .display.results {
-  height: 1.5rem;
-  width: auto;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
 }
+
+.display.results > output {
+  font-family: inherit;
+}
+
+.memory, .operation {
+  font-family: "digital-7_monoitalic", monospace;
+  font-style: italic;
+  font-size: .75rem;
+}
+
+.operation {
+  font-size: .6rem;
+  margin-bottom: .5rem
+}
+
+.output {
+  font-size: 1.6rem;
+}
+
+.display.input {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#input-display {
+  height: 1.1rem;
+  font-family: inherit;
+  border-style: none;
+}
+
+
+
 .btns-container {
+  margin: 1rem;
+  gap: .2rem;
   display: grid;
   grid-template:
-    "clear clear clear clear"
-    ". divide multiply subtract"
-    "seven eight nine add"
-    "four five six add"
-    "one two three equals"
+    "clear clear backspace divide"
+    "seven eight nine multiply"
+    "four five six subtract"
+    "one two three add"
     "zero zero decimal equals";
 }
 
 .btn {
-  width: 4rem;
+  font-size: 1.5rem;
+  font-weight: 250;
+  border: none;
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: .5rem;
+  box-shadow: .1rem .1rem .1rem #693C5E;
 }
+
