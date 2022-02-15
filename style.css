@@ -21,11 +21,11 @@ html {
 * {
   padding: 0;
   margin: 0;
-  /* border: 1px solid orange; */
   box-sizing: border-box;
 }
 
 body {
+  background-color: grey;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,27 +37,42 @@ body {
   width: auto;
   border: 2px solid black;
   border-radius: 1rem;
-  background-color: aquamarine;
+  background-color: burlywood;
   color: black;
 }
 
-
+.calculator-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .display {
   font-family: "digital-7_monomono", monospace;
+  width: 8rem;
+  margin: .1rem;
+  overflow: hidden;
 }
 
 .display.container {
-  margin: 1rem;
+  margin: 1rem 1rem 0;
   padding: .5rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: end;
 }
 
 .display.results {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  background-color: lightgoldenrodyellow;
+  border-radius: .1rem;
+  border: 1px solid black;
+  padding: .2rem;
+
 }
 
 .display.results > output {
@@ -67,33 +82,43 @@ body {
 .memory, .operation {
   font-family: "digital-7_monoitalic", monospace;
   font-style: italic;
-  font-size: .75rem;
+  font-size: .3rem;
+  padding-right: .2rem;
 }
 
 .operation {
   font-size: .6rem;
-  margin-bottom: .5rem
+  margin-bottom: .1rem
 }
 
-.output {
-  font-size: 1.6rem;
+.result {
+  font-size: .8rem;
+  width: 8rem;
 }
 
 .display.input {
   display: flex;
   justify-content: flex-end;
+  border: 1px solid black;
+  background-color: lightgoldenrodyellow;
+  border-radius: .1rem
 }
 
 #input-display {
-  height: 1.1rem;
+  font-size: .8rem;
+  padding-top: .1rem;
+  height: 1rem;
   font-family: inherit;
-  border-style: none;
+  margin-right: .2rem;
 }
 
-
+output {
+  max-width: 8rem;
+  
+}
 
 .btns-container {
-  margin: 1rem;
+  margin: 0 1rem 1rem;
   gap: .2rem;
   display: grid;
   grid-template:
@@ -105,6 +130,7 @@ body {
 }
 
 .btn {
+  background-color: lightgoldenrodyellow;
   font-size: 1.5rem;
   font-weight: 250;
   border: none;
@@ -112,5 +138,29 @@ body {
   height: 2rem;
   border-radius: .5rem;
   box-shadow: .1rem .1rem .1rem #693C5E;
+  text-align: center;
 }
 
+.operator {
+  color: rgb(0, 134, 0);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+#equals {
+  color: rgb(0, 96, 134);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+#clear {
+  color: red;
+  font-weight: 300;
+
+}
+
+#backspace {
+  font-size: 14px;
+  font-weight: 400;
+  color: red;
+}
