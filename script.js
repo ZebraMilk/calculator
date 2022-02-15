@@ -51,7 +51,7 @@ decimal.addEventListener("click", () => makeFloat());
 
 // Add event listeners to key-down events with specific keyIds
 document.addEventListener("keydown", function(e) {
-  if (isFinite(e.key)) {
+  if (isFinite(parseInt(e.key))) {
     keyUpdateInput(e);
   } else if (e.key === "+" || e.keyValue === "-" || e.keyValue === "/" || e.keyValue === "*") {
     keyUpdateOperator(e);
@@ -61,6 +61,8 @@ document.addEventListener("keydown", function(e) {
     updateResult();
   } else if (e.key === ".") {
     makeFloat();
+  } else {
+    return;
   }
 })
 
