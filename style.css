@@ -37,9 +37,9 @@ body {
   width: auto;
   border: 2px solid black;
   border-radius: 1rem;
-  background-color: darkseagreen
-  ;
+  background-color: darkseagreen;
   color: black;
+  box-shadow: .1rem .1rem .2rem #000;
 }
 
 .calculator-body {
@@ -140,6 +140,10 @@ output {
   border-radius: .5rem;
   box-shadow: .1rem .1rem .1rem #693C5E;
   text-align: center;
+}
+
+.btn:hover {
+  background-color: rgb(255, 233, 179);
 }
 
 .operator {
