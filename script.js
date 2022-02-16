@@ -67,8 +67,6 @@ document.addEventListener("keydown", function(e) {
 })
 
 
-
-
 // Shows the number the user has entered
 function keyUpdateInput(e) {
   // Check if the last button clicked was an operator

@@ -37,7 +37,8 @@ body {
   width: auto;
   border: 2px solid black;
   border-radius: 1rem;
-  background-color: burlywood;
+  background-color: darkseagreen
+  ;
   color: black;
 }
 
@@ -160,7 +161,6 @@ output {
 }
 
 #backspace {
-  font-size: 14px;
   font-weight: 400;
   color: red;
 }
