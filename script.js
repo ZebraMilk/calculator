@@ -38,15 +38,15 @@ operators.forEach(operator => {
 numbers.forEach(number => {
   number.addEventListener("click", (e) => updateInput(e));
 });
+
 // KeyboardEvent.key Value === "0" - "9"
 clear.addEventListener("click", () => clearAll());
-
-backspace.addEventListener("click", () => backspaceChar());
 // KeyboardEvent.key Value === "Backspace"
-equals.addEventListener("click", () => updateResult());
+backspace.addEventListener("click", () => backspaceChar());
 // KeyboardEvent.key Value === "Enter"
-decimal.addEventListener("click", () => makeFloat());
+equals.addEventListener("click", () => updateResult());
 // KeyboardEvent.key Value "Decimal"
+decimal.addEventListener("click", () => makeFloat());
 
 
 // Add event listeners to key-down events with specific keyIds
@@ -126,9 +126,9 @@ function updateResult() {
   result = operate(operator, memory, userInput);
   // Update the memory and displays only if the values are not undefined (from dividing by 0)
   if (memory && result) {
+    updateMemoryDisplay();
     memory = result;
     updateResultDisplay();
-    updateMemoryDisplay();
   }
   if (!result) {
     result = 0;
@@ -150,7 +150,7 @@ function keyUpdateOperator(e) {
   }
   operator = e.key;
   updateOperatorDisplay();
-  // This allows the user to keep hitting operators without clearing their userInput
+  // Allows the user to keep hitting operators without clearing their userInput
   freezeInput = true;
 };
 
@@ -176,12 +176,12 @@ function updateOperatorDisplay() {
 
 // Move userInput to Memory
 function updateMemory() {
-  memory = userInput;
   updateMemoryDisplay();
+  memory = userInput;
 };
 
 function updateMemoryDisplay() {
-  memoryDisplay.innerText = `${memory}`;
+  memoryDisplay.innerText = `${memory} ${operator} ${userInput}`;
 };
 
 function makeFloat() {
